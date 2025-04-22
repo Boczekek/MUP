@@ -1,0 +1,21 @@
+<div class="center">
+    <div id="okno">
+
+        <h1 id="zaloguj">Logowanie</h1>
+
+        <form method="POST" action="login.php">
+            <div class="form-group">
+            <label for="login">Login:</label>
+            <input type="text" class="form-control" id="login" name="login" placeholder="Wpisz login" autocomplete="off">
+        </div>
+    <div class="form-group">
+        <label for="haslo">Hasło:</label>
+        <input type="password" class="form-control" id="haslo" name="haslo" placeholder="Wpisz hasło"
+            autocomplete="off">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Zaloguj</button>
+</form>
+
+    </div>
+</div>
