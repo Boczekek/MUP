@@ -1,6 +1,26 @@
+<script>
+$(document).ready(function(){
+    $("#myForm").submit(function(event){
+        event.preventDefault();
+
+        $.ajax({
+            url: "dodaj_towar.php",
+            type: "POST",
+            data: $("#myForm").serialize(),
+            cache: false,
+            success: function (response) {
+                $("#myTable").append(response);
+                console.log(response);
+            }
+        });
+
+    });
+});
+</script>
+
 <h1>Towary</h1>
 
-<table class="table table-hover table-sm">
+<table class="table table-hover" id="myTable">
     <thead>
         <tr>
             <th>Lp.</th
@@ -54,7 +74,7 @@ if(isset($_SESSION['login'])){
 ?>
 
 <div class="center">
-    <form action="dodaj_towar.php" method="post" class="dodawanie">
+    <form action="dodaj_towar.php" id="myForm" method="post" class="dodawanie">
         <h2>Dodawanie towarów</h2>
         <div class="form-group">
             <label for="nazwa">Nazwa:</label>

@@ -1,6 +1,6 @@
-<h4>Zamówienia</h4>
+<h1>Zamówienia</h1>
 
-<table class="table table-hover table-sm">
+<table class="table table-hover table-sm" id="myTable">
 <thead>
         <tr>
            
@@ -41,8 +41,9 @@
 
 
 
-
-<form method="POST" action="zapiszOperacje.php" id="myForm">
+<div class="center">
+<form method="POST" id="myForm" class="dodawanie" action="zapiszOperacje.php">
+<h2>Dodaj zamówienie</h2>
     
 <input type="date" name="dataOperacji"><br>
 <select name="klientID">
@@ -74,7 +75,8 @@
 </select>
 
 <h4>Pozycje:</h4>
-<select name="towar1ID" id="Item">
+<div id="myForm">
+<select name="towar1ID" id="Item"><br>
     
     <?php
         include 'dbconfig.php';
@@ -99,10 +101,11 @@
 
 
 
-</select><br>
+</select></div>
 <h3 id="dodajPozycje">Dodaj pozycję</h3>
-<br><br><button type="submit">zatwierdź</button>
-</for>
+<br><br><button type="submit" class="btn btn-primary">zatwierdź</button>
+</form>
+    </div>
 
 
 <script>
@@ -110,7 +113,9 @@
     const towar = document.getElementById("Item");
     
     function addItem(){
-        document.getElementById("myForm").appendChild(towar);
+        const klon = towar.cloneNode(true); 
+        document.getElementById("myForm").innerHTML()
+        document.getElementById("myForm").append(klon); 
      
     }
 

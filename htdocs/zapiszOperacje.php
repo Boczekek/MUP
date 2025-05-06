@@ -16,5 +16,5 @@ $zapytanie = "INSERT INTO `operacje` (`idk`, `idt`, `data`) VALUES ('$klientID',
 $result = $conn->query($zapytanie);
 
 $conn->close();
-
+echo "<tr><td></td><td>$klientID</td><td>$towarID</td><td>$dataOperacji</td></tr>";
 ?>
