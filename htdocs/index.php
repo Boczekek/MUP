@@ -27,7 +27,6 @@
   <button type="button" link="home.php" class="link btn btn-outline-light">HOME</button>
   <button type="button" link="klienci.php" class="link btn btn-outline-light">KLIENCI</button>
   <button type="button" link="towary.php" class="link btn btn-outline-light">TOWARY</button>
-  <button type="button" link="operacje.php" class="link btn btn-outline-light">OPERACJE</button>
   <button type="button" link="zamowienia.php" class="link btn btn-outline-light">ZAMÓWIENIA</button>
   
   <?PHP
@@ -51,8 +50,8 @@
 </div>
 
 <div class="row.p" id="footer">
-  <div class="col-md-6">(c) Krystian Zając 2025</div>
-  <div class="col-md-6">All Right Reserved</div>
+  <div>(c) Krystian Zając 2025</div>
+  <div>All Right Reserved</div>
 </div>
     
 </body>

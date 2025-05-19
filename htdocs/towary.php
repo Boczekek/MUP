@@ -27,7 +27,6 @@ $(document).ready(function(){
             ><th>Nazwa</th>
             <th>Cena</th>
             <th>Ilość</th>
-            <th>Dostawca</th>
             <th>Akcja</th>
         </tr>
     </thead>
@@ -49,7 +48,7 @@ $(document).ready(function(){
     if ($result->num_rows > 0) {
         $licznik=1;
         while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$licznik++."</td><td>".$row["nazwa"]."</td><td>".$row["cena"]."</td><td>".$row["ilosc"]."</td><td>".$row["dostawca"]."</td>";
+            echo "<tr><td>".$licznik++."</td><td>".$row["nazwa"]."</td><td>".$row["cena"]."</td><td>".$row["ilosc"]."</td>";
 
             if(isset($_SESSION['login'])){
                 echo "<td><a class='del' href='deltowar.php?id=".$row["id"]."'>Usuń</a> | ";
@@ -74,7 +73,7 @@ if(isset($_SESSION['login'])){
 ?>
 
 <div class="center">
-    <form action="dodaj_towar.php" id="myForm" method="post" class="dodawanie">
+    <form method="post" id="myForm" action="dodaj_towar.php" class="dodawanie">
         <h2>Dodawanie towarów</h2>
         <div class="form-group">
             <label for="nazwa">Nazwa:</label>
@@ -87,10 +86,6 @@ if(isset($_SESSION['login'])){
         <div class="form-group">
             <label for="ilosc">Ilość:</label>
             <input type="number" class="form-control" id="ilosc" name="ilosc" placeholder="Wpisz ilość" autocomplete="off">
-        </div>
-        <div class="form-group">
-            <label for="dostawca">Dostawca:</label>
-            <input type="text" class="form-control" id="dostawca" name="dostawca" placeholder="Podaj dostawcę" autocomplete="off">
         </div>
         
         <button type="submit" class="btn btn-primary">Dodaj</button>

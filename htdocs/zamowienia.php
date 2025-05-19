@@ -1,3 +1,23 @@
+<script>
+$(document).ready(function(){
+    $("#myForm").submit(function(event){
+        event.preventDefault();
+
+        $.ajax({
+            url: "zapiszOperacje.php",
+            type: "POST",
+            data: $("#myForm").serialize(),
+            cache: false,
+            success: function (response) {
+                $("#myTable").append(response);
+                console.log(response);
+            }
+        });
+
+    });
+});
+</script>
+
 <h1>Zamówienia</h1>
 
 <table class="table table-hover table-sm" id="myTable">
@@ -42,7 +62,7 @@
 
 
 <div class="center">
-<form method="POST" id="myForm" class="dodawanie" action="zapiszOperacje.php">
+<form method="post" id="myForm" action="zapiszOperacje.php" class="dodawanie">
 <h2>Dodaj zamówienie</h2>
     
 <input type="date" name="dataOperacji"><br>
