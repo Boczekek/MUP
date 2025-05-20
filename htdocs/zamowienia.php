@@ -20,6 +20,8 @@ $(document).ready(function(){
 
 <h1>Zamówienia</h1>
 
+<div class="center">
+    <div class="okno">
 <table class="table table-hover table-sm" id="myTable">
 <thead>
         <tr>
@@ -56,7 +58,8 @@ $(document).ready(function(){
         ?>
     </tbody>
 </table>
-
+    </div>
+    </div>
 
 
 
@@ -65,8 +68,8 @@ $(document).ready(function(){
 <form method="post" id="myForm" action="zapiszOperacje.php" class="dodawanie">
 <h2>Dodaj zamówienie</h2>
     
-<input type="date" name="dataOperacji"><br>
-<select name="klientID">
+Data: <input type="date" name="dataOperacji"><br>
+Klient: <select name="klientID">
     
     <?php
         include 'dbconfig.php';
@@ -94,9 +97,8 @@ $(document).ready(function(){
 
 </select>
 
-<h4>Pozycje:</h4>
 <div id="myForm">
-<select name="towar1ID" id="Item"><br>
+Towar: <select name="towar1ID" id="Item"><br>
     
     <?php
         include 'dbconfig.php';
@@ -122,7 +124,8 @@ $(document).ready(function(){
 
 
 </select></div>
-<h3 id="dodajPozycje">Dodaj pozycję</h3>
+<br>
+<h4 id="dodajPozycje">[ Dodaj pozycję ]</h4>
 <br><br><button type="submit" class="btn btn-primary">zatwierdź</button>
 </form>
     </div>

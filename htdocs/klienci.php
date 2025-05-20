@@ -26,7 +26,8 @@ $(document).ready(function(){
 
 
 <h1>Klienci</h1>
-
+<div class="center">
+<div class="okno">
 <table class="table table-hover" id="myTable">
     <thead>
         <tr>
@@ -70,6 +71,8 @@ $(document).ready(function(){
         ?>
     </tbody>
 </table>
+    </div>
+    </div>
 
 <?php
 

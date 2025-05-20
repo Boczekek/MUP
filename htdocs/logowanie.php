@@ -1,5 +1,5 @@
 <div class="center">
-    <div id="okno">
+    <div class="okno">
 
         <h1 id="zaloguj">Logowanie</h1>
 
