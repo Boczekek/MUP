@@ -1,0 +1,4 @@
+Dodawanie operatora:
+
+INSERT INTO `operatorzy` (`id`, `login`, `haslo`, `imie`, `nazwisko`, `email`, `status`) VALUES (NULL, 'admin', SHA1('123456'), 'Adam', 'Administracyjny', 'admin@serwer.pl', '0');
+
